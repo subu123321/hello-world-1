@@ -22,12 +22,19 @@
   </modules>
 
   <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>Subramanis-MacBook-Pro.local-snapshots</name>
+        <url>http://localhost:8081/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+</distributionManagement>
+   <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>Subramanis-MacBook-Pro.local-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 
   <build>
     <plugins>
